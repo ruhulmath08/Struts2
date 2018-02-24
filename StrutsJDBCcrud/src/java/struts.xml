@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="registeruser" class="com.ruhul.action.RegisterAction">
+			<result name="REGISTER">/register.jsp</result>
+		</action>
+		<action name="report" class="com.ruhul.action.ReportAction">
+			<result name="REPORT">/report.jsp</result>
+		</action>
+		<action name="updatedetails" class="com.ruhul.action.UpdateAction">
+			<result name="UPDATE">/update.jsp</result>
+		</action>
+		<action name="deleterecord" class="com.ruhul.action.DeleteAction">
+			<result name="DELETE">/delete.jsp</result>
+		</action>
+	</package>
+</struts>

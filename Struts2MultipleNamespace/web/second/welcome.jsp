@@ -1,0 +1,1 @@
+<h1>Welcome to second namespace</h1>

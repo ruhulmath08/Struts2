@@ -16,10 +16,6 @@ import org.hibernate.Session;
  * @author Ruhul-Pc
  */
 public class UserLoginDao {
-    
-    private String username;
-    private String password;
-    //for save data in database
     public void add(Userlogin userlogin) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
@@ -29,23 +25,14 @@ public class UserLoginDao {
     }
 
     //for check username and password
-    public boolean checkUser() {
-        try {
+    public int checkUser(Userlogin userlogin) {
             Session session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
-            Query query = session.createQuery("from userlogin where username=:username and password=:password");
-            query.setString("username", username);
-            query.setString("password", password);
+            Query query = session.createQuery("from Userlogin where username=:username and password=:password");
+            query.setString("username", userlogin.getUsername());
+            query.setString("password", userlogin.getPassword());
             List list = query.list();
-            System.out.println("list size " + list.size());
-            if (list.size() == 1) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return false;
+            session.close();
+            return list.size();
     }
 }

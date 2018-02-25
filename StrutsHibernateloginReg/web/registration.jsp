@@ -8,7 +8,7 @@
     </head>
     <body>
         <h2>User Registration</h2>
-        <s:form action="registeruser.action" method="post">
+        <s:form action="registeruser" method="post">
             <s:textfield label="Username" name="userlogin.username" />
             <s:password label="Password" name="userlogin.password" />
             <s:textfield label="Email" name="userlogin.email" />

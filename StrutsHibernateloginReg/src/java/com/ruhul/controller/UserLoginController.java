@@ -40,11 +40,21 @@ public class UserLoginController extends ActionSupport{
     }
     
     public String checkValidation(){
-        boolean b = userLoginDao.checkUser();
-        if (b == true) {
+        int i = userLoginDao.checkUser(userlogin);
+        if (i > 0) {
             return "success";
         } else {
             return "error";
         }
     }
+    
+    public String login(){
+        int i = userLoginDao.checkUser(userlogin);
+        if(i>0){
+            return "success";
+        }else{
+            return "error";
+        }
+        
+}
 }

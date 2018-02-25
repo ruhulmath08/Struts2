@@ -7,9 +7,9 @@
         <action name="registeruser" class="com.ruhul.controller.UserLoginController">
             <result name="REGISTER">/login.jsp</result>
         </action>
-        <action name="registeruser" class="com.ruhul.controller.UserLoginController" method="checkValidation">
+        <action name="login" class="com.ruhul.controller.UserLoginController" method="login">
             <result name="success">/sucess.jsp</result>
-            <result name="error">/error</result>
+            <result name="error">/error.jsp</result>
         </action>
     </package>
     

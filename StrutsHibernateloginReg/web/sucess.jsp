@@ -7,6 +7,7 @@
         <title>Success</title>
     </head>
     <body>
-        <h1 style="color: blue">Success</h1>
+        <h1 style="color: blue">Login Success!!</h1>
+        <a href="login.jsp">Back to Login</a>
     </body>
 </html>

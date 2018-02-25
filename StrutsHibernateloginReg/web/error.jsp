@@ -7,6 +7,7 @@
         <title>Error</title>
     </head>
     <body>
-        <h1 style="color: red">Error</h1>
+        <h1 style="color: red">Ops Error!!!</h1>
+        <a href="login.jsp">Tray Again</a>
     </body>
 </html>
